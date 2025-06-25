@@ -7,51 +7,55 @@
 
 /* ESTILO GERAL DO CORPO DA PÁGINA */
 body {
-  font-family: Arial, sans-serif; /* Define a fonte */
-  line-height: 1.6; /* Espaçamento entre linhas */
-  background: #79797908; /* Cor de fundo clara */
-  color: #333; /* Cor do texto */
-  padding: 20px; /* Espaçamento interno */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+  padding: 20px;
 }
 
 /* CABEÇALHO */
 header {
-  background: #004080; /* Cor azul escuro */
-  color: white; /* Texto branco */
+  background: #004080;
+  color: white;
   padding: 20px;
-  text-align: center; /* Centraliza o conteúdo */
-  border-radius: 8px; /* Cantos arredondados */
-  margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 header h1 {
-  font-size: 2em; /* Tamanho maior do título */
+  font-size: 2em;
   margin-bottom: 10px;
 }
 
 /* CONTEÚDO PRINCIPAL */
 main {
-  max-width: 900px; /* Largura máxima */
-  margin: auto; /* Centraliza horizontalmente */
-  background: white; /* Fundo branco */
+  max-width: 900px;
+  margin: auto;
+  background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra leve ao redor */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* SEÇÕES DO CONTEÚDO */
 section {
-  margin-bottom: 30px; /* Espaço entre seções */
+  margin-bottom: 30px;
 }
 
 section h2 {
   margin-bottom: 10px;
-  color: #004080; /* Azul escuro */
+  color: #004080;
 }
 
 /* FORMULÁRIOS */
 form {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-group {
   margin-bottom: 10px;
 }
 
@@ -65,7 +69,7 @@ input[type="checkbox"] {
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%; /* Ocupa toda a largura disponível */
+  width: 100%;
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 15px;
@@ -81,21 +85,19 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease; /* Animação suave ao passar o mouse */
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background: #002f5f; /* Tom mais escuro ao passar o mouse */
+  background: #002f5f;
 }
 
 /* TABELA DE PONTUAÇÃO */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
 }
 
-/* CÉLULAS DA TABELA */
 table th,
 table td {
   border: 1px solid #ccc;
@@ -103,51 +105,6 @@ table td {
   text-align: left;
 }
 
-/* CABEÇALHO DA TABELA */
 table th {
   background: #004080;
-  color: white;
-}
-
-/* DETALHES COM "VER RESPOSTAS" */
-details summary {
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #004080;
-}
-
-ol {
-  padding-left: 20px; /* Recuo da lista */
-}
-
-/* FORMULÁRIO DE FEEDBACK */
-fieldset {
-  border: 2px solid #004080;
-  padding: 15px;
-  border-radius: 5px;
-}
-
-legend {
-  font-weight: bold;
-  color: #004080;
-}
-
-/* RODAPÉ */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #777;
-}
-
-footer a {
-  color: #004080;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
+  color
