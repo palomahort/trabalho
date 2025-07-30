@@ -9,15 +9,49 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: #f4f4f4;
   color: #333;
   padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(-45deg, rgba(0, 64, 128, 0.6), rgba(0, 102, 204, 0.6), rgba(0, 191, 255, 0.6), rgba(0, 47, 95, 0.6)),
+    url('https://www.transparenttextures.com/patterns/symphony.png');
+  background-size: 400% 400%, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  animation: animacaoFundo 15s ease infinite;
+}
+
+@keyframes animacaoFundo {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.5) 0%, transparent 70%),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.4) 0%, transparent 70%),
+    radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  background-repeat: no-repeat;
+  animation: flashes 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes flashes {
+  0%, 100% { background-size: 0 0, 0 0, 0 0; }
+  50% { background-size: 180px 180px, 130px 130px, 150px 150px; }
 }
 
 /* CABEÇALHO */
 header {
-  background: #f7a4f0;
-  color: rgb(237, 106, 204);
+  background: #004080;
+  color: white;
   padding: 20px;
   text-align: center;
   border-radius: 8px;
@@ -46,7 +80,7 @@ section {
 
 section h2 {
   margin-bottom: 10px;
-  color: #e042eb;
+  color: #004080;
 }
 
 /* FORMULÁRIOS */
@@ -59,13 +93,11 @@ form {
   margin-bottom: 10px;
 }
 
-/* Estilo para opções de rádio e checkbox */
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 8px;
 }
 
-/* CAMPOS DE TEXTO E EMAIL */
 input[type="text"],
 input[type="email"],
 textarea {
@@ -79,7 +111,7 @@ textarea {
 
 /* BOTÃO */
 button {
-  background: #c05ee7;
+  background: #004080;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -89,13 +121,14 @@ button {
 }
 
 button:hover {
-  background: #d060e7;
+  background: #002f5f;
 }
 
 /* TABELA DE PONTUAÇÃO */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 10px;
 }
 
 table th,
@@ -106,5 +139,49 @@ table td {
 }
 
 table th {
-  background: #d859d8;
-  color
+  background: #004080;
+  color: white;
+}
+
+/* FIELDSET E LEGEND */
+fieldset {
+  border: 2px solid #004080;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: bold;
+  color: #004080;
+}
+
+/* DETAILS */
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #004080;
+}
+
+/* LISTA ORDENADA */
+ol {
+  padding-left: 20px;
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #0e0000ef;
+}
+
+footer a {
+  color: #004080;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
