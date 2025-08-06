@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-image:
-    linear-gradient(-45deg, rgba(0, 64, 128, 0.6), rgba(0, 102, 204, 0.6), rgba(0, 191, 255, 0.6), rgba(0, 47, 95, 0.6)),
+    linear-gradient(-45deg, rgba(197, 7, 250, 0.6), rgba(183, 15, 225, 0.776), rgba(190, 13, 217, 0.6), rgba(0, 47, 95, 0.6)),
     url('https://www.transparenttextures.com/patterns/symphony.png');
   background-size: 400% 400%, cover;
   background-repeat: no-repeat, no-repeat;
@@ -50,7 +50,7 @@ body::before {
 
 /* CABEÇALHO */
 header {
-  background: #004080;
+  background: #ee0ef5;
   color: white;
   padding: 20px;
   text-align: center;
@@ -80,7 +80,7 @@ section {
 
 section h2 {
   margin-bottom: 10px;
-  color: #004080;
+  color: #654763;
 }
 
 /* FORMULÁRIOS */
@@ -111,7 +111,7 @@ textarea {
 
 /* BOTÃO */
 button {
-  background: #004080;
+  background: #cb12cb;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -121,7 +121,7 @@ button {
 }
 
 button:hover {
-  background: #002f5f;
+  background: #c304c3;
 }
 
 /* TABELA DE PONTUAÇÃO */
@@ -139,20 +139,20 @@ table td {
 }
 
 table th {
-  background: #004080;
+  background: #8210a4;
   color: white;
 }
 
 /* FIELDSET E LEGEND */
 fieldset {
-  border: 2px solid #004080;
+  border: 2px solid #750e85;
   padding: 15px;
   border-radius: 5px;
 }
 
 legend {
   font-weight: bold;
-  color: #004080;
+  color: #8f0da3;
 }
 
 /* DETAILS */
@@ -160,7 +160,7 @@ details summary {
   cursor: pointer;
   font-weight: bold;
   margin: 10px 0;
-  color: #004080;
+  color: #a42195;
 }
 
 /* LISTA ORDENADA */
@@ -178,7 +178,7 @@ footer {
 }
 
 footer a {
-  color: #004080;
+  color: #841dc0;
   text-decoration: none;
 }
 

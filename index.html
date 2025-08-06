@@ -127,6 +127,28 @@
         </section>
 
         <!-- Seção para exibir resultado -->
+         <section>
+      <h2>Nos dê o seu feedback</h2>
+      <fieldset>
+        <legend>Informações de contato</legend>
+        <form id="feedbackForm" action="https://formspree.io/f/mjkrydnl&quot; method="POST">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="nome" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="_replyto" required>
+
+          <label for="comentario">Comentário:</label>
+          <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+          <input type="hidden" id="campoAcertos" name="Acertos">
+          <input type="hidden" id="campoErros" name="Erros">
+          <input type="hidden" id="campoResumo" name="Resumo_das_respostas">
+
+          <button type="submit">Enviar respostas e feedback</button>
+        </form>
+      </fieldset>
+    </section>
         <section>
             <h2>Finalize seu Quiz</h2>
             <label for="emailUser">Digite seu email para salvar seu resultado:</label><br>
