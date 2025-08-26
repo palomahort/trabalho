@@ -1,21 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt">
+        <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>Quiz Matemática: Equações de 2º grau</title>
-    <meta name="description" content="Um quiz interativo para testar seus conhecimentos em matemática">
+  <meta charset="UTF-8" />
+  <title>Quiz Interativo de Matemática CEAK</title>
+  <meta name="description" content="um quiz interativo para testar seus conhecimentos em matemática" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Quiz Interativo de Matemática CEAK</h1>
-        <p>Teste seus conhecimentos em equações do 2º grau e descubra sua pontuação!</p>
-    </header>
+  <header>
+    <h1>Quiz matemática CEAK</h1>
+    <p>Teste seus conhecimentos com 10 questões sobre trigonometria.</p>
+  </header>
 
-    <main>
-        <section>
-            <h2>Sobre o Quiz</h2>
-            <p>Este quiz é para testar seu conhecimento sobre equações do 2º grau. Boa sorte!</p>
-        </section>
+  <main>
+    <section>
+      <h2>Sobre o Quiz</h2>
+      <p>Este quiz é para testar seu conhecimento sobre equações do 2º grau. Boa sorte!</p>
+    </section>
+
+    <form id="quizForm" action="https://formspree.io/f/mjkrydnl" method="POST">
+
+  <main>
+    <section>
+      <h2>Sobre esse quiz</h2>
+      <p>Este quiz foi desenvolvido para testar seus conhecimentos sobre equações do segundo grau . Você precisará escolher as respostas corretas de acordo com o enunciado e, ao final, nos dar um feedback.</p>
+    </section>
 
         <section>
             <h2>Pergunta 1: Qual é a forma geral de uma equação do 2º grau?</h2>
@@ -126,44 +135,73 @@
             </table>
         </section>
 
-        <!-- Seção para exibir resultado -->
-         <section>
-      <h2>Nos dê o seu feedback</h2>
-      <fieldset>
-        <legend>Informações de contato</legend>
-        <form id="feedbackForm" action="https://formspree.io/f/mjkrydnl&quot; method="POST">
-          <label for="name">Nome:</label>
-          <input type="text" id="name" name="nome" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="_replyto" required>
-
-          <label for="comentario">Comentário:</label>
-          <textarea id="comentario" name="comentario" rows="4" required></textarea>
-
-          <input type="hidden" id="campoAcertos" name="Acertos">
-          <input type="hidden" id="campoErros" name="Erros">
-          <input type="hidden" id="campoResumo" name="Resumo_das_respostas">
-
-          <button type="submit">Enviar respostas e feedback</button>
-        </form>
-      </fieldset>
-       <script src="script.js"></script>
-    </section>
         <section>
-            <h2>Finalize seu Quiz</h2>
-            <label for="emailUser">Digite seu email para salvar seu resultado:</label><br>
-            <input type="email" id="emailUser" required placeholder="seuemail@exemplo.com"><br><br>
-            <button id="btnEnviar">Enviar Respostas</button>
-            <div id="resultadoFinal" style="margin-top: 20px;"></div>
-        </section>
+        <h2>Nos dê o seu feedback</h2>
+        <fieldset>
+          <legend>Informações de contato</legend>
 
-        <footer>
-            <p>&copy; 2025 Quiz de Matemática. Todos os direitos reservados.</p>
-            <p>Para conhecer outros quizzes <a href="https://google.com" target="_blank">clique aqui</a>.</p>
-        </footer>
-    </main>
+          <label for="name">Nome:</label><br>
+          <input type="text" id="name" name="nome" required /><br>
 
-    <script src="script.js"></script>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="_replyto" required /><br>
+
+          <label for="comentario">Comentário:</label><br>
+          <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Digite seus comentários aqui" required></textarea><br>
+
+          <!-- Campos ocultos preenchidos via JS -->
+          <input type="hidden" id="campoAcertos" name="Acertos" />
+          <input type="hidden" id="campoErros" name="Erros" />
+          <input type="hidden" id="campoResumo" name="Resumo_das_respostas" />
+
+          <button type="button" onclick="processarEEnviar()">Enviar respostas e feedback</button>
+        </fieldset>
+      </section>
+    </form>
+  </main>
+
+  <footer>
+    <p>Quiz de matemática. Todos os direitos reservados.</p>
+    <p>Para conhecer outros quizzes <a href="https://flgferas.github.io/sitenovoleo/" target="_blank" rel="noopener noreferrer">clique aqui.</a></p>
+  </footer>
+
+  <script>
+    function processarEEnviar() {
+      const form = document.getElementById('quizForm');
+
+      const gabarito = {
+      'pergunta1': 'ax² + bx + c = 0', // Exemplo de resposta correta para pergunta 1
+    'pergunta2': 'a soma das raízes é igual a -b/a', // Exemplo de resposta correta para pergunta 2
+    'pergunta3': ['2x² - 5x + 1 = 0'], // Exemplo de resposta correta para pergunta 3
+    'pergunta4': 'x = 2 ou x = -2' // Exemplo de resposta correta para pergunta 4
+      };
+
+      let acertos = 0;
+      let erros = 0;
+      let resumo = '';
+
+      for (let i = 1; i <= 10; i++) {
+        const nome = `pergunta${i}`;
+        const resposta = form.querySelector(`input[name="${nome}"]:checked`);
+        const valor = resposta ? resposta.value : 'sem resposta';
+
+        resumo += `Pergunta ${i}: ${valor}\n`;
+
+        if (valor === gabarito[nome]) {
+          acertos++;
+        } else {
+          erros++;
+        }
+      }
+
+      document.getElementById('campoAcertos').value = acertos;
+      document.getElementById('campoErros').value = erros;
+      document.getElementById('campoResumo').value = resumo.trim();
+
+      alert(`Você acertou ${acertos} de 10 perguntas.`);
+
+      form.submit();
+    }
+  </script>
 </body>
 </html>
