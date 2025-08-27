@@ -27,7 +27,7 @@
     </section>
 
         <section>
-            <h2>Pergunta 1: Qual é a forma geral de uma equação do 2º grau?</h2>
+            <h2>Pergunta1: Qual é a forma geral de uma equação do 2º grau?</h2>
                 <div class="form-group">
                     <input type="radio" value="ax + b = 0" id="p1a" name="pergunta1">
                     <label for="p1a">ax + b = 0</label>
@@ -47,13 +47,13 @@
         </section>
 
         <section>
-            <h2>Pergunta 2: Complete a frase: A soma das raízes de uma equação do 2º grau é igual a _____.</h2>
+            <h2>Pergunta2: Complete a frase: A soma das raízes de uma equação do 2º grau é igual a _____.</h2>
                 <input type="text" id="p2" name="pergunta2" placeholder="Digite sua resposta aqui">
             
         </section>
 
         <section>
-            <h2>Pergunta 3: Qual das opções abaixo representa uma equação do 2º grau?</h2>
+            <h2>Pergunta3: Qual das opções abaixo representa uma equação do 2º grau?</h2>
             
                 <div class="form-group">
                     <input type="checkbox" id="p3a" name="pergunta3" value="x + 3 = 0">
@@ -71,7 +71,7 @@
         </section>
 
         <section>
-            <h2>Pergunta 4: Qual é o valor de x na equação x² - 4 = 0?</h2>
+            <h2>Pergunta4: Qual é o valor de x na equação x² - 4 = 0?</h2>
             
                 <div class="form-group">
                     <input type="radio" value="x = 2 ou x = -2" id="p4a" name="pergunta4">
@@ -89,7 +89,7 @@
         </section>
 
         <section>
-            <h2>Pergunta 5: Qual é o discriminante (Δ) da equação 3x² + 2x - 1 = 0?</h2>
+            <h2>Pergunta5: Qual é o discriminante (Δ) da equação 3x² + 2x - 1 = 0?</h2>
             
                 <div class="form-group">
                     <input type="radio" value="16" id="p5a" name="pergunta5">
@@ -131,8 +131,8 @@
                 </tbody>
             </table>
         </section>
-
-        <section>
+      
+<section>
         <h2>Nos dê o seu feedback</h2>
         <fieldset>
           <legend>Informações de contato</legend>
@@ -167,10 +167,11 @@
       const form = document.getElementById('quizForm');
 
       const gabarito = {
-      'pergunta1': 'ax² + bx + c = 0', // Exemplo de resposta correta para pergunta 1
-    'pergunta2': 'a soma das raízes é igual a -b/a', // Exemplo de resposta correta para pergunta 2
-    'pergunta3': ['2x² - 5x + 1 = 0'], // Exemplo de resposta correta para pergunta 3
-    'pergunta4': 'x = 2 ou x = -2' // Exemplo de resposta correta para pergunta 4
+        pergunta1: 'ax² + bx + c = 0', // Exemplo de resposta correta para pergunta 1
+        pergunta2: 'a soma das raízes é igual a -b/a', // Exemplo de resposta correta para pergunta 2
+        pergunta3: ['2x² - 5x + 1 = 0'], // Exemplo de resposta correta para pergunta 3
+        pergunta4: 'x = 2 ou x = -2', // Exemplo de resposta correta para pergunta 4
+        pergunta5: '16',
       };
 
       let acertos = 0;
@@ -195,7 +196,7 @@
       document.getElementById('campoErros').value = erros;
       document.getElementById('campoResumo').value = resumo.trim();
 
-      alert(`Você acertou ${acertos} de 10 perguntas.`);
+      alert(`Você acertou ${acertos} de 5 perguntas.`);
 
       form.submit();
     }
