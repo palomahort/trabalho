@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const gabarito = {
     'pergunta1': 'ax² + bx + c = 0', // Exemplo de resposta correta para pergunta 1
     'pergunta2': 'a soma das raízes é igual a -b/a', // Exemplo de resposta correta para pergunta 2
-    'pergunta3': ['2x² - 5x + 1 = 0'], // Exemplo de resposta correta para pergunta 3
+    'pergunta3': '2x² - 5x + 1 = 0', // Exemplo de resposta correta para pergunta 3
     'pergunta4': 'x = 2 ou x = -2', // Exemplo de resposta correta para pergunta 4
     'pergunta5': '16',
   };
@@ -107,11 +107,11 @@ document.getElementById('campoErros').value = erros;
 
 // Cria um resumo textual das respostas
 const respostasResumo = `
-      Pergunta 1: ${p1 ? p1.value : 'sem resposta'}
-      Pergunta 2: ${p2 ? p2.value : 'sem resposta'}
-      Pergunta 3: ${p3 ? p3.value : 'sem resposta'}
-      Pergunta 4: ${p4 ? p4.value : 'sem resposta'}
-      Pergunta 5: ${p5 ? p5.value : 'sem resposta'}
+      Pergunta1: ${p1 ? p1.value : 'sem resposta'}
+      Pergunta2: ${p2 ? p2.value : 'sem resposta'}
+      Pergunta3: ${p3 ? p3.value : 'sem resposta'}
+      Pergunta4: ${p4 ? p4.value : 'sem resposta'}
+      Pergunta5: ${p5 ? p5.value : 'sem resposta'}
     `;
 document.getElementById('campoResumo').value = respostasResumo.trim();
 
